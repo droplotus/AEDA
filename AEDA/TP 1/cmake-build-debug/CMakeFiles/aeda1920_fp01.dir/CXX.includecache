@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/droplotus/Desktop/AEDA/Tests/parque.cpp
+parque.h
+/home/droplotus/Desktop/AEDA/Tests/parque.h
+vector
+-
+
+/home/droplotus/Desktop/AEDA/Tests/parque.h
+iostream
+-
+string
+-
+vector
+-
+
