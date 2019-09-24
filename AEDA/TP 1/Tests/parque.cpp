@@ -59,5 +59,5 @@ bool ParqueEstacionamento::sair(const string &nome) {
     return true;
 }
 
-unsigned int ParqueEstacionamento::getNumLugaresOcupados() const { return numMaximoClientes - vagas; }
+unsigned int ParqueEstacionamento::getNumLugaresOcupados() const { return lotacao - vagas; }
 unsigned int ParqueEstacionamento::getNumClientesAtuais() const { return clientes.size(); }

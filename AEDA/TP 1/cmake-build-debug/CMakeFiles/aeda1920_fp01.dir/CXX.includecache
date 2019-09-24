@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/droplotus/Desktop/AEDA/Tests/parque.cpp
+/home/droplotus/Desktop/FAC/AEDA/TP 1/Tests/parque.cpp
 parque.h
-/home/droplotus/Desktop/AEDA/Tests/parque.h
+/home/droplotus/Desktop/FAC/AEDA/TP 1/Tests/parque.h
 vector
 -
 
-/home/droplotus/Desktop/AEDA/Tests/parque.h
+/home/droplotus/Desktop/FAC/AEDA/TP 1/Tests/parque.h
 iostream
 -
 string

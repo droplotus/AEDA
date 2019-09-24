@@ -79,7 +79,7 @@ TEST(test_1, e_SairParque){
     // Testa se n�o deixa sair um cliente que n�o existe.
     ASSERT_EQ(false, p1.sair("Antonio"));
 }
-/*
+
 TEST(test_1, f_LugaresLotacaoParque){
     ParqueEstacionamento p1(3, 5);
     p1.adicionaCliente("Joao");
@@ -93,4 +93,4 @@ TEST(test_1, f_LugaresLotacaoParque){
     ASSERT_EQ(2, p1.getNumLugaresOcupados());
     // Testa se o o n�mero de clientes registados no parque est� correcto
     ASSERT_EQ(3, p1.getNumClientesAtuais());
-}*/
+}

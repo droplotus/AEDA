@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -Wall -Wshadow -Werror -Wno-error=dangling-else -DGTEST_HAS_PTH
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/droplotus/Desktop/AEDA/lib/googletest-master/googlemock/include -I/home/droplotus/Desktop/AEDA/lib/googletest-master/googlemock -isystem /home/droplotus/Desktop/AEDA/lib/googletest-master/googletest/include -isystem /home/droplotus/Desktop/AEDA/lib/googletest-master/googletest 
+CXX_INCLUDES = -I"/home/droplotus/Desktop/FAC/AEDA/TP 1/lib/googletest-master/googlemock/include" -I"/home/droplotus/Desktop/FAC/AEDA/TP 1/lib/googletest-master/googlemock" -isystem "/home/droplotus/Desktop/FAC/AEDA/TP 1/lib/googletest-master/googletest/include" -isystem "/home/droplotus/Desktop/FAC/AEDA/TP 1/lib/googletest-master/googletest" 
 

@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -std=gnu++11
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/droplotus/Desktop/AEDA/lib/googletest-master/googlemock/include -isystem /home/droplotus/Desktop/AEDA/lib/googletest-master/googletest/include -isystem /home/droplotus/Desktop/AEDA/lib/googletest-master/googletest 
+CXX_INCLUDES = -I"/home/droplotus/Desktop/FAC/AEDA/TP 1/lib/googletest-master/googlemock/include" -isystem "/home/droplotus/Desktop/FAC/AEDA/TP 1/lib/googletest-master/googletest/include" -isystem "/home/droplotus/Desktop/FAC/AEDA/TP 1/lib/googletest-master/googletest" 
 
