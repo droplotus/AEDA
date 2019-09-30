@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/droplotus/Desktop/pratica2/Tests/veiculo.cpp
+veiculo.h
+/home/droplotus/Desktop/pratica2/Tests/veiculo.h
+iostream
+-
+
+/home/droplotus/Desktop/pratica2/Tests/veiculo.h
+string
+-
+
