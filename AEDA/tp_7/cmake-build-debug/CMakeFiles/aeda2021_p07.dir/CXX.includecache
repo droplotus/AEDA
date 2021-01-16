@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Droplotus/Desktop/AEDA/tp_7/Tests/binaryTree.h
+iostream
+-
+stack
+-
+queue
+-
+
+C:/Users/Droplotus/Desktop/AEDA/tp_7/Tests/game.cpp
+game.h
+C:/Users/Droplotus/Desktop/AEDA/tp_7/Tests/game.h
+sstream
+-
+
+C:/Users/Droplotus/Desktop/AEDA/tp_7/Tests/game.h
+binaryTree.h
+C:/Users/Droplotus/Desktop/AEDA/tp_7/Tests/binaryTree.h
+iostream
+-
+stdlib.h
+-
+
