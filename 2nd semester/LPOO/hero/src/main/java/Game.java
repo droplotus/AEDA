@@ -1,5 +1,7 @@
 import com.googlecode.lanterna.TerminalSize;
 import com.googlecode.lanterna.TextCharacter;
+import com.googlecode.lanterna.input.KeyStroke;
+import com.googlecode.lanterna.input.KeyType;
 import com.googlecode.lanterna.screen.Screen;
 import com.googlecode.lanterna.screen.TerminalScreen;
 import com.googlecode.lanterna.terminal.DefaultTerminalFactory;
@@ -7,11 +9,18 @@ import com.googlecode.lanterna.terminal.Terminal;
 
 import java.io.IOException;
 
+import static com.googlecode.lanterna.input.KeyType.ArrowUp;
+import static com.googlecode.lanterna.input.KeyType.EOF;
+
 public class Game{
 
     private Screen screen;
+    private Hero hero;
 
     public Game(){
+
+        hero = new Hero(10, 10);
+
         try {
             TerminalSize terminalSize = new TerminalSize(40, 20);
             DefaultTerminalFactory terminalFactory = new DefaultTerminalFactory()
@@ -23,17 +32,34 @@ public class Game{
         }
     }
 
+    private void processKey(KeyStroke key) throws IOException {
+        switch (key.getKeyType()){
+            case ArrowUp:
+                hero.moveUp(); break;
+            case ArrowDown:
+                hero.moveDown(); break;
+            case ArrowLeft:
+                hero.moveLeft(); break;
+            case ArrowRight:
+                hero.moveRight(); break;
+            case Character:
+                if(key.getCharacter() == 'q') screen.close(); break;
+        }
+    }
+
     private void draw() throws IOException {
-        screen.setCursorPosition(null);   // we don't need a cursor
-        screen.startScreen();             // screens must be started
-        screen.doResizeIfNecessary();     // resize screen if necessary
         screen.clear();
-        screen.setCharacter(10, 10, TextCharacter.fromCharacter('X')[0]);
+        hero.draw(screen);
         screen.refresh();
     }
 
     public void run() throws IOException {
-        draw();
+        while(true){
+            draw();
+            KeyStroke key = screen.readInput();
+            processKey(key);
+            if(key.getKeyType() == EOF) break;
+        }
     }
 
 }
