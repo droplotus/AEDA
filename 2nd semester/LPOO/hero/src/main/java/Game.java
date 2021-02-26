@@ -19,7 +19,7 @@ public class Game{
 
     public Game(){
 
-        hero = new Hero(10, 10);
+        hero = new Hero(new Position(10, 10));
 
         try {
             TerminalSize terminalSize = new TerminalSize(40, 20);
@@ -35,16 +35,20 @@ public class Game{
     private void processKey(KeyStroke key) throws IOException {
         switch (key.getKeyType()){
             case ArrowUp:
-                hero.moveUp(); break;
+                moveHero(hero.moveUp()); break;
             case ArrowDown:
-                hero.moveDown(); break;
+                moveHero(hero.moveDown()); break;
             case ArrowLeft:
-                hero.moveLeft(); break;
+                moveHero(hero.moveLeft()); break;
             case ArrowRight:
-                hero.moveRight(); break;
+                moveHero(hero.moveRight()); break;
             case Character:
                 if(key.getCharacter() == 'q') screen.close(); break;
         }
+    }
+
+    public void moveHero(Position position){
+        hero.setPosition(position);
     }
 
     private void draw() throws IOException {
