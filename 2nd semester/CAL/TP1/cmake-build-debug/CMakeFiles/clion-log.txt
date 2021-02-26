@@ -1,4 +1,4 @@
-"C:\Program Files\JetBrains\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\Droplotus\Desktop\cal_fp01_CLion
+"C:\Program Files\JetBrains\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" "C:\Users\Droplotus\Desktop\FAC\2nd semester\CAL\TP1"
 -- The C compiler identification is GNU 8.1.0
 -- The CXX compiler identification is GNU 8.1.0
 -- Check for working C compiler: C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/gcc.exe
@@ -16,4 +16,4 @@
 -- Found Python: C:/Program Files/WindowsApps/PythonSoftwareFoundation.Python.3.9_3.9.496.0_x64__qbz5n2kfra8p0/python3.9.exe (found version "3.9.1") found components: Interpreter 
 -- Configuring done
 -- Generating done
--- Build files have been written to: C:/Users/Droplotus/Desktop/cal_fp01_CLion/cmake-build-debug
+-- Build files have been written to: C:/Users/Droplotus/Desktop/FAC/2nd semester/CAL/TP1/cmake-build-debug

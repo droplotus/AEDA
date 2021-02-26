@@ -3,8 +3,19 @@
 #include "exercises.h"
 
 bool changeMakingGreedy(unsigned int C[], unsigned int Stock[], unsigned int n, unsigned int T, unsigned int usedCoins[]) {
-    //TODO...
 
+    unsigned int total = T;
+
+    for(int i=0; i<n; i++) usedCoins[i] = 0;
+
+    for(int i = n-1; total>0 && i>=0 ; i--){
+        while(total >= C[i] && Stock[i]>0){
+            total -= C[i];
+            Stock[i] = Stock[i] - 1;
+            usedCoins[i] = usedCoins[i] + 1;
+        }
+    }
+    if(total == 0) return true;
     return false;
 }
 

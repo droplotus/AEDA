@@ -62,10 +62,10 @@ RM = "C:\Program Files\JetBrains\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Droplotus\Desktop\cal_fp01_CLion
+CMAKE_SOURCE_DIR = "C:\Users\Droplotus\Desktop\FAC\2nd semester\CAL\TP1"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Droplotus\Desktop\cal_fp01_CLion\cmake-build-debug
+CMAKE_BINARY_DIR = "C:\Users\Droplotus\Desktop\FAC\2nd semester\CAL\TP1\cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include TP1/CMakeFiles/TP1.dir/depend.make
@@ -79,114 +79,114 @@ include TP1/CMakeFiles/TP1.dir/flags.make
 TP1/CMakeFiles/TP1.dir/main.cpp.obj: TP1/CMakeFiles/TP1.dir/flags.make
 TP1/CMakeFiles/TP1.dir/main.cpp.obj: TP1/CMakeFiles/TP1.dir/includes_CXX.rsp
 TP1/CMakeFiles/TP1.dir/main.cpp.obj: ../TP1/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Droplotus\Desktop\cal_fp01_CLion\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object TP1/CMakeFiles/TP1.dir/main.cpp.obj"
-	cd /d C:\Users\Droplotus\Desktop\cal_fp01_CLion\cmake-build-debug\TP1 && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\TP1.dir\main.cpp.obj -c C:\Users\Droplotus\Desktop\cal_fp01_CLion\TP1\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Droplotus\Desktop\FAC\2nd semester\CAL\TP1\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object TP1/CMakeFiles/TP1.dir/main.cpp.obj"
+	cd /d C:\Users\DROPLO~1\Desktop\FAC\2NDSEM~1\CAL\TP1\CMAKE-~1\TP1 && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\TP1.dir\main.cpp.obj -c "C:\Users\Droplotus\Desktop\FAC\2nd semester\CAL\TP1\TP1\main.cpp"
 
 TP1/CMakeFiles/TP1.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP1.dir/main.cpp.i"
-	cd /d C:\Users\Droplotus\Desktop\cal_fp01_CLion\cmake-build-debug\TP1 && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Droplotus\Desktop\cal_fp01_CLion\TP1\main.cpp > CMakeFiles\TP1.dir\main.cpp.i
+	cd /d C:\Users\DROPLO~1\Desktop\FAC\2NDSEM~1\CAL\TP1\CMAKE-~1\TP1 && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Droplotus\Desktop\FAC\2nd semester\CAL\TP1\TP1\main.cpp" > CMakeFiles\TP1.dir\main.cpp.i
 
 TP1/CMakeFiles/TP1.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP1.dir/main.cpp.s"
-	cd /d C:\Users\Droplotus\Desktop\cal_fp01_CLion\cmake-build-debug\TP1 && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Droplotus\Desktop\cal_fp01_CLion\TP1\main.cpp -o CMakeFiles\TP1.dir\main.cpp.s
+	cd /d C:\Users\DROPLO~1\Desktop\FAC\2NDSEM~1\CAL\TP1\CMAKE-~1\TP1 && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Droplotus\Desktop\FAC\2nd semester\CAL\TP1\TP1\main.cpp" -o CMakeFiles\TP1.dir\main.cpp.s
 
 TP1/CMakeFiles/TP1.dir/ex1.cpp.obj: TP1/CMakeFiles/TP1.dir/flags.make
 TP1/CMakeFiles/TP1.dir/ex1.cpp.obj: TP1/CMakeFiles/TP1.dir/includes_CXX.rsp
 TP1/CMakeFiles/TP1.dir/ex1.cpp.obj: ../TP1/ex1.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Droplotus\Desktop\cal_fp01_CLion\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object TP1/CMakeFiles/TP1.dir/ex1.cpp.obj"
-	cd /d C:\Users\Droplotus\Desktop\cal_fp01_CLion\cmake-build-debug\TP1 && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\TP1.dir\ex1.cpp.obj -c C:\Users\Droplotus\Desktop\cal_fp01_CLion\TP1\ex1.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Droplotus\Desktop\FAC\2nd semester\CAL\TP1\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object TP1/CMakeFiles/TP1.dir/ex1.cpp.obj"
+	cd /d C:\Users\DROPLO~1\Desktop\FAC\2NDSEM~1\CAL\TP1\CMAKE-~1\TP1 && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\TP1.dir\ex1.cpp.obj -c "C:\Users\Droplotus\Desktop\FAC\2nd semester\CAL\TP1\TP1\ex1.cpp"
 
 TP1/CMakeFiles/TP1.dir/ex1.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP1.dir/ex1.cpp.i"
-	cd /d C:\Users\Droplotus\Desktop\cal_fp01_CLion\cmake-build-debug\TP1 && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Droplotus\Desktop\cal_fp01_CLion\TP1\ex1.cpp > CMakeFiles\TP1.dir\ex1.cpp.i
+	cd /d C:\Users\DROPLO~1\Desktop\FAC\2NDSEM~1\CAL\TP1\CMAKE-~1\TP1 && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Droplotus\Desktop\FAC\2nd semester\CAL\TP1\TP1\ex1.cpp" > CMakeFiles\TP1.dir\ex1.cpp.i
 
 TP1/CMakeFiles/TP1.dir/ex1.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP1.dir/ex1.cpp.s"
-	cd /d C:\Users\Droplotus\Desktop\cal_fp01_CLion\cmake-build-debug\TP1 && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Droplotus\Desktop\cal_fp01_CLion\TP1\ex1.cpp -o CMakeFiles\TP1.dir\ex1.cpp.s
+	cd /d C:\Users\DROPLO~1\Desktop\FAC\2NDSEM~1\CAL\TP1\CMAKE-~1\TP1 && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Droplotus\Desktop\FAC\2nd semester\CAL\TP1\TP1\ex1.cpp" -o CMakeFiles\TP1.dir\ex1.cpp.s
 
 TP1/CMakeFiles/TP1.dir/ex2.cpp.obj: TP1/CMakeFiles/TP1.dir/flags.make
 TP1/CMakeFiles/TP1.dir/ex2.cpp.obj: TP1/CMakeFiles/TP1.dir/includes_CXX.rsp
 TP1/CMakeFiles/TP1.dir/ex2.cpp.obj: ../TP1/ex2.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Droplotus\Desktop\cal_fp01_CLion\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object TP1/CMakeFiles/TP1.dir/ex2.cpp.obj"
-	cd /d C:\Users\Droplotus\Desktop\cal_fp01_CLion\cmake-build-debug\TP1 && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\TP1.dir\ex2.cpp.obj -c C:\Users\Droplotus\Desktop\cal_fp01_CLion\TP1\ex2.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Droplotus\Desktop\FAC\2nd semester\CAL\TP1\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object TP1/CMakeFiles/TP1.dir/ex2.cpp.obj"
+	cd /d C:\Users\DROPLO~1\Desktop\FAC\2NDSEM~1\CAL\TP1\CMAKE-~1\TP1 && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\TP1.dir\ex2.cpp.obj -c "C:\Users\Droplotus\Desktop\FAC\2nd semester\CAL\TP1\TP1\ex2.cpp"
 
 TP1/CMakeFiles/TP1.dir/ex2.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP1.dir/ex2.cpp.i"
-	cd /d C:\Users\Droplotus\Desktop\cal_fp01_CLion\cmake-build-debug\TP1 && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Droplotus\Desktop\cal_fp01_CLion\TP1\ex2.cpp > CMakeFiles\TP1.dir\ex2.cpp.i
+	cd /d C:\Users\DROPLO~1\Desktop\FAC\2NDSEM~1\CAL\TP1\CMAKE-~1\TP1 && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Droplotus\Desktop\FAC\2nd semester\CAL\TP1\TP1\ex2.cpp" > CMakeFiles\TP1.dir\ex2.cpp.i
 
 TP1/CMakeFiles/TP1.dir/ex2.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP1.dir/ex2.cpp.s"
-	cd /d C:\Users\Droplotus\Desktop\cal_fp01_CLion\cmake-build-debug\TP1 && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Droplotus\Desktop\cal_fp01_CLion\TP1\ex2.cpp -o CMakeFiles\TP1.dir\ex2.cpp.s
+	cd /d C:\Users\DROPLO~1\Desktop\FAC\2NDSEM~1\CAL\TP1\CMAKE-~1\TP1 && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Droplotus\Desktop\FAC\2nd semester\CAL\TP1\TP1\ex2.cpp" -o CMakeFiles\TP1.dir\ex2.cpp.s
 
 TP1/CMakeFiles/TP1.dir/ex3.cpp.obj: TP1/CMakeFiles/TP1.dir/flags.make
 TP1/CMakeFiles/TP1.dir/ex3.cpp.obj: TP1/CMakeFiles/TP1.dir/includes_CXX.rsp
 TP1/CMakeFiles/TP1.dir/ex3.cpp.obj: ../TP1/ex3.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Droplotus\Desktop\cal_fp01_CLion\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object TP1/CMakeFiles/TP1.dir/ex3.cpp.obj"
-	cd /d C:\Users\Droplotus\Desktop\cal_fp01_CLion\cmake-build-debug\TP1 && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\TP1.dir\ex3.cpp.obj -c C:\Users\Droplotus\Desktop\cal_fp01_CLion\TP1\ex3.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Droplotus\Desktop\FAC\2nd semester\CAL\TP1\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object TP1/CMakeFiles/TP1.dir/ex3.cpp.obj"
+	cd /d C:\Users\DROPLO~1\Desktop\FAC\2NDSEM~1\CAL\TP1\CMAKE-~1\TP1 && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\TP1.dir\ex3.cpp.obj -c "C:\Users\Droplotus\Desktop\FAC\2nd semester\CAL\TP1\TP1\ex3.cpp"
 
 TP1/CMakeFiles/TP1.dir/ex3.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP1.dir/ex3.cpp.i"
-	cd /d C:\Users\Droplotus\Desktop\cal_fp01_CLion\cmake-build-debug\TP1 && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Droplotus\Desktop\cal_fp01_CLion\TP1\ex3.cpp > CMakeFiles\TP1.dir\ex3.cpp.i
+	cd /d C:\Users\DROPLO~1\Desktop\FAC\2NDSEM~1\CAL\TP1\CMAKE-~1\TP1 && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Droplotus\Desktop\FAC\2nd semester\CAL\TP1\TP1\ex3.cpp" > CMakeFiles\TP1.dir\ex3.cpp.i
 
 TP1/CMakeFiles/TP1.dir/ex3.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP1.dir/ex3.cpp.s"
-	cd /d C:\Users\Droplotus\Desktop\cal_fp01_CLion\cmake-build-debug\TP1 && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Droplotus\Desktop\cal_fp01_CLion\TP1\ex3.cpp -o CMakeFiles\TP1.dir\ex3.cpp.s
+	cd /d C:\Users\DROPLO~1\Desktop\FAC\2NDSEM~1\CAL\TP1\CMAKE-~1\TP1 && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Droplotus\Desktop\FAC\2nd semester\CAL\TP1\TP1\ex3.cpp" -o CMakeFiles\TP1.dir\ex3.cpp.s
 
 TP1/CMakeFiles/TP1.dir/ex4.cpp.obj: TP1/CMakeFiles/TP1.dir/flags.make
 TP1/CMakeFiles/TP1.dir/ex4.cpp.obj: TP1/CMakeFiles/TP1.dir/includes_CXX.rsp
 TP1/CMakeFiles/TP1.dir/ex4.cpp.obj: ../TP1/ex4.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Droplotus\Desktop\cal_fp01_CLion\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object TP1/CMakeFiles/TP1.dir/ex4.cpp.obj"
-	cd /d C:\Users\Droplotus\Desktop\cal_fp01_CLion\cmake-build-debug\TP1 && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\TP1.dir\ex4.cpp.obj -c C:\Users\Droplotus\Desktop\cal_fp01_CLion\TP1\ex4.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Droplotus\Desktop\FAC\2nd semester\CAL\TP1\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object TP1/CMakeFiles/TP1.dir/ex4.cpp.obj"
+	cd /d C:\Users\DROPLO~1\Desktop\FAC\2NDSEM~1\CAL\TP1\CMAKE-~1\TP1 && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\TP1.dir\ex4.cpp.obj -c "C:\Users\Droplotus\Desktop\FAC\2nd semester\CAL\TP1\TP1\ex4.cpp"
 
 TP1/CMakeFiles/TP1.dir/ex4.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP1.dir/ex4.cpp.i"
-	cd /d C:\Users\Droplotus\Desktop\cal_fp01_CLion\cmake-build-debug\TP1 && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Droplotus\Desktop\cal_fp01_CLion\TP1\ex4.cpp > CMakeFiles\TP1.dir\ex4.cpp.i
+	cd /d C:\Users\DROPLO~1\Desktop\FAC\2NDSEM~1\CAL\TP1\CMAKE-~1\TP1 && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Droplotus\Desktop\FAC\2nd semester\CAL\TP1\TP1\ex4.cpp" > CMakeFiles\TP1.dir\ex4.cpp.i
 
 TP1/CMakeFiles/TP1.dir/ex4.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP1.dir/ex4.cpp.s"
-	cd /d C:\Users\Droplotus\Desktop\cal_fp01_CLion\cmake-build-debug\TP1 && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Droplotus\Desktop\cal_fp01_CLion\TP1\ex4.cpp -o CMakeFiles\TP1.dir\ex4.cpp.s
+	cd /d C:\Users\DROPLO~1\Desktop\FAC\2NDSEM~1\CAL\TP1\CMAKE-~1\TP1 && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Droplotus\Desktop\FAC\2nd semester\CAL\TP1\TP1\ex4.cpp" -o CMakeFiles\TP1.dir\ex4.cpp.s
 
 TP1/CMakeFiles/TP1.dir/ex5.cpp.obj: TP1/CMakeFiles/TP1.dir/flags.make
 TP1/CMakeFiles/TP1.dir/ex5.cpp.obj: TP1/CMakeFiles/TP1.dir/includes_CXX.rsp
 TP1/CMakeFiles/TP1.dir/ex5.cpp.obj: ../TP1/ex5.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Droplotus\Desktop\cal_fp01_CLion\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object TP1/CMakeFiles/TP1.dir/ex5.cpp.obj"
-	cd /d C:\Users\Droplotus\Desktop\cal_fp01_CLion\cmake-build-debug\TP1 && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\TP1.dir\ex5.cpp.obj -c C:\Users\Droplotus\Desktop\cal_fp01_CLion\TP1\ex5.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Droplotus\Desktop\FAC\2nd semester\CAL\TP1\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object TP1/CMakeFiles/TP1.dir/ex5.cpp.obj"
+	cd /d C:\Users\DROPLO~1\Desktop\FAC\2NDSEM~1\CAL\TP1\CMAKE-~1\TP1 && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\TP1.dir\ex5.cpp.obj -c "C:\Users\Droplotus\Desktop\FAC\2nd semester\CAL\TP1\TP1\ex5.cpp"
 
 TP1/CMakeFiles/TP1.dir/ex5.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP1.dir/ex5.cpp.i"
-	cd /d C:\Users\Droplotus\Desktop\cal_fp01_CLion\cmake-build-debug\TP1 && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Droplotus\Desktop\cal_fp01_CLion\TP1\ex5.cpp > CMakeFiles\TP1.dir\ex5.cpp.i
+	cd /d C:\Users\DROPLO~1\Desktop\FAC\2NDSEM~1\CAL\TP1\CMAKE-~1\TP1 && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Droplotus\Desktop\FAC\2nd semester\CAL\TP1\TP1\ex5.cpp" > CMakeFiles\TP1.dir\ex5.cpp.i
 
 TP1/CMakeFiles/TP1.dir/ex5.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP1.dir/ex5.cpp.s"
-	cd /d C:\Users\Droplotus\Desktop\cal_fp01_CLion\cmake-build-debug\TP1 && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Droplotus\Desktop\cal_fp01_CLion\TP1\ex5.cpp -o CMakeFiles\TP1.dir\ex5.cpp.s
+	cd /d C:\Users\DROPLO~1\Desktop\FAC\2NDSEM~1\CAL\TP1\CMAKE-~1\TP1 && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Droplotus\Desktop\FAC\2nd semester\CAL\TP1\TP1\ex5.cpp" -o CMakeFiles\TP1.dir\ex5.cpp.s
 
 TP1/CMakeFiles/TP1.dir/ex6.cpp.obj: TP1/CMakeFiles/TP1.dir/flags.make
 TP1/CMakeFiles/TP1.dir/ex6.cpp.obj: TP1/CMakeFiles/TP1.dir/includes_CXX.rsp
 TP1/CMakeFiles/TP1.dir/ex6.cpp.obj: ../TP1/ex6.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Droplotus\Desktop\cal_fp01_CLion\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object TP1/CMakeFiles/TP1.dir/ex6.cpp.obj"
-	cd /d C:\Users\Droplotus\Desktop\cal_fp01_CLion\cmake-build-debug\TP1 && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\TP1.dir\ex6.cpp.obj -c C:\Users\Droplotus\Desktop\cal_fp01_CLion\TP1\ex6.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Droplotus\Desktop\FAC\2nd semester\CAL\TP1\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object TP1/CMakeFiles/TP1.dir/ex6.cpp.obj"
+	cd /d C:\Users\DROPLO~1\Desktop\FAC\2NDSEM~1\CAL\TP1\CMAKE-~1\TP1 && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\TP1.dir\ex6.cpp.obj -c "C:\Users\Droplotus\Desktop\FAC\2nd semester\CAL\TP1\TP1\ex6.cpp"
 
 TP1/CMakeFiles/TP1.dir/ex6.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP1.dir/ex6.cpp.i"
-	cd /d C:\Users\Droplotus\Desktop\cal_fp01_CLion\cmake-build-debug\TP1 && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Droplotus\Desktop\cal_fp01_CLion\TP1\ex6.cpp > CMakeFiles\TP1.dir\ex6.cpp.i
+	cd /d C:\Users\DROPLO~1\Desktop\FAC\2NDSEM~1\CAL\TP1\CMAKE-~1\TP1 && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Droplotus\Desktop\FAC\2nd semester\CAL\TP1\TP1\ex6.cpp" > CMakeFiles\TP1.dir\ex6.cpp.i
 
 TP1/CMakeFiles/TP1.dir/ex6.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP1.dir/ex6.cpp.s"
-	cd /d C:\Users\Droplotus\Desktop\cal_fp01_CLion\cmake-build-debug\TP1 && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Droplotus\Desktop\cal_fp01_CLion\TP1\ex6.cpp -o CMakeFiles\TP1.dir\ex6.cpp.s
+	cd /d C:\Users\DROPLO~1\Desktop\FAC\2NDSEM~1\CAL\TP1\CMAKE-~1\TP1 && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Droplotus\Desktop\FAC\2nd semester\CAL\TP1\TP1\ex6.cpp" -o CMakeFiles\TP1.dir\ex6.cpp.s
 
 TP1/CMakeFiles/TP1.dir/ex7.cpp.obj: TP1/CMakeFiles/TP1.dir/flags.make
 TP1/CMakeFiles/TP1.dir/ex7.cpp.obj: TP1/CMakeFiles/TP1.dir/includes_CXX.rsp
 TP1/CMakeFiles/TP1.dir/ex7.cpp.obj: ../TP1/ex7.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Droplotus\Desktop\cal_fp01_CLion\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object TP1/CMakeFiles/TP1.dir/ex7.cpp.obj"
-	cd /d C:\Users\Droplotus\Desktop\cal_fp01_CLion\cmake-build-debug\TP1 && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\TP1.dir\ex7.cpp.obj -c C:\Users\Droplotus\Desktop\cal_fp01_CLion\TP1\ex7.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Droplotus\Desktop\FAC\2nd semester\CAL\TP1\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object TP1/CMakeFiles/TP1.dir/ex7.cpp.obj"
+	cd /d C:\Users\DROPLO~1\Desktop\FAC\2NDSEM~1\CAL\TP1\CMAKE-~1\TP1 && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\TP1.dir\ex7.cpp.obj -c "C:\Users\Droplotus\Desktop\FAC\2nd semester\CAL\TP1\TP1\ex7.cpp"
 
 TP1/CMakeFiles/TP1.dir/ex7.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP1.dir/ex7.cpp.i"
-	cd /d C:\Users\Droplotus\Desktop\cal_fp01_CLion\cmake-build-debug\TP1 && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Droplotus\Desktop\cal_fp01_CLion\TP1\ex7.cpp > CMakeFiles\TP1.dir\ex7.cpp.i
+	cd /d C:\Users\DROPLO~1\Desktop\FAC\2NDSEM~1\CAL\TP1\CMAKE-~1\TP1 && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Droplotus\Desktop\FAC\2nd semester\CAL\TP1\TP1\ex7.cpp" > CMakeFiles\TP1.dir\ex7.cpp.i
 
 TP1/CMakeFiles/TP1.dir/ex7.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP1.dir/ex7.cpp.s"
-	cd /d C:\Users\Droplotus\Desktop\cal_fp01_CLion\cmake-build-debug\TP1 && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Droplotus\Desktop\cal_fp01_CLion\TP1\ex7.cpp -o CMakeFiles\TP1.dir\ex7.cpp.s
+	cd /d C:\Users\DROPLO~1\Desktop\FAC\2NDSEM~1\CAL\TP1\CMAKE-~1\TP1 && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Droplotus\Desktop\FAC\2nd semester\CAL\TP1\TP1\ex7.cpp" -o CMakeFiles\TP1.dir\ex7.cpp.s
 
 # Object files for target TP1
 TP1_OBJECTS = \
@@ -218,8 +218,8 @@ TP1/TP1.exe: lib/libgtestd.a
 TP1/TP1.exe: TP1/CMakeFiles/TP1.dir/linklibs.rsp
 TP1/TP1.exe: TP1/CMakeFiles/TP1.dir/objects1.rsp
 TP1/TP1.exe: TP1/CMakeFiles/TP1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Droplotus\Desktop\cal_fp01_CLion\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable TP1.exe"
-	cd /d C:\Users\Droplotus\Desktop\cal_fp01_CLion\cmake-build-debug\TP1 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\TP1.dir\link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Droplotus\Desktop\FAC\2nd semester\CAL\TP1\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable TP1.exe"
+	cd /d C:\Users\DROPLO~1\Desktop\FAC\2NDSEM~1\CAL\TP1\CMAKE-~1\TP1 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\TP1.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 TP1/CMakeFiles/TP1.dir/build: TP1/TP1.exe
@@ -227,10 +227,10 @@ TP1/CMakeFiles/TP1.dir/build: TP1/TP1.exe
 .PHONY : TP1/CMakeFiles/TP1.dir/build
 
 TP1/CMakeFiles/TP1.dir/clean:
-	cd /d C:\Users\Droplotus\Desktop\cal_fp01_CLion\cmake-build-debug\TP1 && $(CMAKE_COMMAND) -P CMakeFiles\TP1.dir\cmake_clean.cmake
+	cd /d C:\Users\DROPLO~1\Desktop\FAC\2NDSEM~1\CAL\TP1\CMAKE-~1\TP1 && $(CMAKE_COMMAND) -P CMakeFiles\TP1.dir\cmake_clean.cmake
 .PHONY : TP1/CMakeFiles/TP1.dir/clean
 
 TP1/CMakeFiles/TP1.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\Droplotus\Desktop\cal_fp01_CLion C:\Users\Droplotus\Desktop\cal_fp01_CLion\TP1 C:\Users\Droplotus\Desktop\cal_fp01_CLion\cmake-build-debug C:\Users\Droplotus\Desktop\cal_fp01_CLion\cmake-build-debug\TP1 C:\Users\Droplotus\Desktop\cal_fp01_CLion\cmake-build-debug\TP1\CMakeFiles\TP1.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\Droplotus\Desktop\FAC\2nd semester\CAL\TP1" "C:\Users\Droplotus\Desktop\FAC\2nd semester\CAL\TP1\TP1" "C:\Users\Droplotus\Desktop\FAC\2nd semester\CAL\TP1\cmake-build-debug" "C:\Users\Droplotus\Desktop\FAC\2nd semester\CAL\TP1\cmake-build-debug\TP1" "C:\Users\Droplotus\Desktop\FAC\2nd semester\CAL\TP1\cmake-build-debug\TP1\CMakeFiles\TP1.dir\DependInfo.cmake" --color=$(COLOR)
 .PHONY : TP1/CMakeFiles/TP1.dir/depend
 

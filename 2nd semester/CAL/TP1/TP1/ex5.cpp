@@ -13,7 +13,6 @@ unsigned int sumArray(unsigned int a[], unsigned int n) {
 #include <iostream>
 
 bool isCanonical(unsigned int C[], unsigned int n) {
-    //TODO...
 
     return false;
 }

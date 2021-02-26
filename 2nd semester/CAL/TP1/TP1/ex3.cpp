@@ -1,10 +1,22 @@
 // By: Gonçalo Leão
 
 #include "exercises.h"
-
+#include <iostream>
 bool changeMakingBF(unsigned int C[], unsigned int Stock[], unsigned int n, unsigned int T, unsigned int usedCoins[]) {
-    //TODO...
 
+    unsigned int total = T;
+
+    for (int i = 0; i < n; i++) usedCoins[i] = 0;
+
+    for (int j = n - 1; j >= 0; j--) {
+        while (total >= C[j] && Stock[j] > 0) {
+            total -= C[j];
+            Stock[j] = Stock[j] - 1;
+            usedCoins[j] = usedCoins[j] + 1;
+        }
+    }
+
+    if (total == 0) return true;
     return false;
 }
 

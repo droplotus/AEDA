@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Droplotus/Desktop/cal_fp01_CLion/TP1
+# Install script for directory: C:/Users/Droplotus/Desktop/FAC/2nd semester/CAL/TP1/TP1
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
