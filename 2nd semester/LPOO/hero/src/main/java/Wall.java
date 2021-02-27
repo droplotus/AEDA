@@ -10,10 +10,12 @@ public class Wall extends Element{
         super(x, y);
     }
 
+    @Override
     public Position getPosition(){
-        return this.position;
+        return position;
     }
 
+    @Override
     public void draw(TextGraphics graphics){
         graphics.setForegroundColor(TextColor.Factory.fromString("#000000"));
         graphics.putString(new TerminalPosition(position.getX(), position.getY()), "@");

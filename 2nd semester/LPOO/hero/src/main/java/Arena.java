@@ -8,6 +8,7 @@ import com.googlecode.lanterna.screen.Screen;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class Arena {
     private int width;
@@ -15,12 +16,14 @@ public class Arena {
 
     private Hero hero;
     private List<Wall> walls;
+    private List<Coin> coins;
 
     public Arena(int width, int height){
         this.width = width;
         this.height = height;
         this.hero = new Hero(10, 10);
         this.walls = createWalls();
+        this.coins = createCoins();
     }
 
     private List<Wall> createWalls() {
@@ -37,6 +40,19 @@ public class Arena {
         }
 
         return walls;
+    }
+
+    private List<Coin> createCoins(){
+        Random random = new Random();
+        ArrayList<Coin> coins = new ArrayList<>();
+        for (int i = 0; i < 5; i++) {
+            Coin coin = new Coin(random.nextInt(width - 2) + 1, random.nextInt(height - 2) + 1);
+            while(coin.getPosition().equals(hero.getPosition())) // falta ver se já coincide com alguma outra coin da List
+                coin = new Coin(random.nextInt(width - 2) + 1, random.nextInt(height - 2) + 1);
+
+            coins.add(coin);
+        }
+        return coins;
     }
 
     public void processKey(KeyStroke key, Screen screen) throws IOException {
@@ -67,8 +83,18 @@ public class Arena {
     }
 
     public void moveHero(Position position){
-        if (canHeroMove(position))
+        if (canHeroMove(position)){
             hero.setPosition(position);
+            retrieveCoins();
+        }
+    }
+
+    public void retrieveCoins(){
+        for (Coin coin : coins)
+            if (hero.getPosition().equals(coin.getPosition())){
+                coins.remove(coin);
+                break;
+            }
     }
 
     public void draw(TextGraphics graphics) throws IOException {
@@ -79,6 +105,7 @@ public class Arena {
         // drawing components
         hero.draw(graphics);
         for(Wall wall : walls) wall.draw(graphics);
+        for(Coin coin : coins) coin.draw(graphics);
     }
 
 }

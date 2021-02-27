@@ -13,6 +13,12 @@ public class Hero extends Element{
 
     }
 
+    @Override
+    public Position getPosition() {
+        return position;
+    }
+
+    @Override
     public void draw(TextGraphics graphics){
         graphics.setForegroundColor(TextColor.Factory.fromString("#D2D201"));
         graphics.enableModifiers(SGR.BOLD);

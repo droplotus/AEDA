@@ -9,5 +9,6 @@ public abstract class Element {
         this.position = new Position(x, y);
     }
 
+    public abstract Position getPosition();
     public abstract void draw(TextGraphics graphics) throws IOException;
 }
