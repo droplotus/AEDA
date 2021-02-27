@@ -7,15 +7,14 @@ import com.googlecode.lanterna.screen.Screen;
 
 import java.io.IOException;
 
-public class Hero {
-    Position position;
+public class Hero extends Element{
+    public Hero(int x, int y){
+        super(x, y);
 
-    public Hero(Position position){
-        this.position = position;
     }
 
-    public void draw(TextGraphics graphics) throws IOException {
-        graphics.setForegroundColor(TextColor.Factory.fromString("#FFFF33"));
+    public void draw(TextGraphics graphics){
+        graphics.setForegroundColor(TextColor.Factory.fromString("#D2D201"));
         graphics.enableModifiers(SGR.BOLD);
         graphics.putString(new TerminalPosition(position.getX(), position.getY()), "X");
     }
