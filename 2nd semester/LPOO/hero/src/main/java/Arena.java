@@ -29,14 +29,14 @@ public class Arena {
     private List<Wall> createWalls() {
         List<Wall> walls = new ArrayList<>();
 
-        for (int c = 0; c < width; c++) {
+        for (int c = 0; c < width*2; c++) {
             walls.add(new Wall(c, 0));
-            walls.add(new Wall(c, height - 1));
+            walls.add(new Wall(c, height*2 - 1));
         }
 
-        for (int r = 1; r < height - 1; r++) {
+        for (int r = 1; r < height*2 - 1; r++) {
             walls.add(new Wall(0, r));
-            walls.add(new Wall(width - 1, r));
+            walls.add(new Wall(width*2 - 1, r));
         }
 
         return walls;
@@ -45,10 +45,10 @@ public class Arena {
     private List<Coin> createCoins(){
         Random random = new Random();
         ArrayList<Coin> coins = new ArrayList<>();
-        for (int i = 0; i < 5; i++) {
-            Coin coin = new Coin(random.nextInt(width - 2) + 1, random.nextInt(height - 2) + 1);
+        for (int i = 0; i < 10; i++) {
+            Coin coin = new Coin(random.nextInt(width*2 - 2) + 1, random.nextInt(height*2 - 2) + 1);
             while(coin.getPosition().equals(hero.getPosition())) // falta ver se já coincide com alguma outra coin da List
-                coin = new Coin(random.nextInt(width - 2) + 1, random.nextInt(height - 2) + 1);
+                coin = new Coin(random.nextInt(width*2 - 2) + 1, random.nextInt(height*2 - 2) + 1);
 
             coins.add(coin);
         }
