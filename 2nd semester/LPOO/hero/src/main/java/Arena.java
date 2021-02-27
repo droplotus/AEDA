@@ -17,6 +17,7 @@ public class Arena {
     private Hero hero;
     private List<Wall> walls;
     private List<Coin> coins;
+    private List<Monster> monsters;
 
     public Arena(int width, int height){
         this.width = width;
@@ -24,6 +25,7 @@ public class Arena {
         this.hero = new Hero(10, 10);
         this.walls = createWalls();
         this.coins = createCoins();
+        this.monsters = createMonsters();
     }
 
     private List<Wall> createWalls() {
@@ -55,6 +57,19 @@ public class Arena {
         return coins;
     }
 
+    private List<Monster> createMonsters() {
+        Random random = new Random();
+        ArrayList<Monster> monsters = new ArrayList<>();
+        for (int i = 0; i < 10; i++) {
+            Monster monster = new Monster(random.nextInt(width*2 - 2) + 1, random.nextInt(height*2 - 2) + 1);
+            while(monster.getPosition().equals(hero.getPosition()))
+                monster = new Monster(random.nextInt(width*2 - 2) + 1, random.nextInt(height*2 - 2) + 1);
+
+            monsters.add(monster);
+        }
+        return monsters;
+    }
+
     public void processKey(KeyStroke key, Screen screen) throws IOException {
         switch (key.getKeyType()){
             case ArrowUp:
@@ -67,6 +82,24 @@ public class Arena {
                 moveHero(hero.moveRight()); break;
             case Character:
                 if(key.getCharacter() == 'q') screen.close(); break;
+        }
+        for (Monster m : monsters) {
+            moveMonster(m.move(), m);
+            verifyMonsterCollisions();
+        }
+    }
+
+    private boolean canMonsterMove(Position position){
+        for (Wall wall : walls){
+            if (wall.getPosition().equals(position)) return false;
+            else continue;
+        }
+        return true;
+    }
+
+    public void moveMonster(Position position, Monster m){
+        if (canMonsterMove(position)){
+            m.setPosition(position);
         }
     }
 
@@ -97,6 +130,20 @@ public class Arena {
             }
     }
 
+    public void verifyMonsterCollisions(){
+        for (Monster m : monsters)
+            if (hero.getPosition().equals(m.getPosition())){
+                monsters.remove(m);
+                monsters.remove(m);
+                monsters.remove(m);
+                monsters.remove(m);
+                monsters.remove(m);
+
+                System.out.println("You Died");
+                System.exit(0);
+            }
+    }
+
     public void draw(TextGraphics graphics) throws IOException {
         // setting background
         graphics.setBackgroundColor(TextColor.Factory.fromString("#488AD7"));
@@ -106,6 +153,7 @@ public class Arena {
         hero.draw(graphics);
         for(Wall wall : walls) wall.draw(graphics);
         for(Coin coin : coins) coin.draw(graphics);
+        for(Monster monster : monsters) monster.draw(graphics);
     }
 
 }
