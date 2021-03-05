@@ -1,16 +1,17 @@
+package com.elements;
+
+import com.elements.Element;
 import com.googlecode.lanterna.SGR;
 import com.googlecode.lanterna.TerminalPosition;
-import com.googlecode.lanterna.TextCharacter;
 import com.googlecode.lanterna.TextColor;
 import com.googlecode.lanterna.graphics.TextGraphics;
-import com.googlecode.lanterna.screen.Screen;
 
-import java.io.IOException;
+import com.position.Position;
 
-public class Hero extends Element{
+public class Hero extends Element {
+    private int energy = 100;
     public Hero(int x, int y){
         super(x, y);
-
     }
 
     @Override
@@ -44,5 +45,9 @@ public class Hero extends Element{
     public Position moveLeft(){
         return new Position(position.getX() -1, position.getY());
     }
+
+    public int getEnergy(){ return energy; }
+
+    public void drainEvergy(){ energy -= 50; }
 
 }

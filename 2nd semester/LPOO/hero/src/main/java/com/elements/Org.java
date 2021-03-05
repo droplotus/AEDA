@@ -1,22 +1,18 @@
+package com.elements;
+
+import com.elements.Monster;
 import com.googlecode.lanterna.SGR;
 import com.googlecode.lanterna.TerminalPosition;
 import com.googlecode.lanterna.TextColor;
 import com.googlecode.lanterna.graphics.TextGraphics;
 
+import com.position.Position;
+
 import java.util.Random;
 
-public class Monster extends Element{
-    public Monster(int x, int y){
+public class Org extends Monster {
+    public Org(int x, int y) {
         super(x, y);
-    }
-
-    public void setPosition(Position position){
-        this.position = position;
-    }
-
-    @Override
-    public Position getPosition(){
-        return position;
     }
 
     @Override
@@ -26,6 +22,7 @@ public class Monster extends Element{
         graphics.putString(new TerminalPosition(position.getX(), position.getY()), "O");
     }
 
+    @Override
     public Position move(){
         Random random = new Random();
         Position p;

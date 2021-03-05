@@ -1,6 +1,9 @@
+package com.elements;
+
 import com.googlecode.lanterna.graphics.TextGraphics;
 
 import java.io.IOException;
+import com.position.*;
 
 public abstract class Element {
     protected Position position;

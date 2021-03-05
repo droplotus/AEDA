@@ -1,9 +1,13 @@
+package com.arena;
+
+import com.elements.*;
 import com.googlecode.lanterna.TerminalPosition;
 import com.googlecode.lanterna.TerminalSize;
 import com.googlecode.lanterna.TextColor;
 import com.googlecode.lanterna.graphics.TextGraphics;
 import com.googlecode.lanterna.input.KeyStroke;
 import com.googlecode.lanterna.screen.Screen;
+import com.position.Position;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -61,12 +65,21 @@ public class Arena {
         Random random = new Random();
         ArrayList<Monster> monsters = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
-            Monster monster = new Monster(random.nextInt(width*2 - 2) + 1, random.nextInt(height*2 - 2) + 1);
+            Monster monster = new Org(random.nextInt(width*2 - 2) + 1, random.nextInt(height*2 - 2) + 1);
             while(monster.getPosition().equals(hero.getPosition()))
-                monster = new Monster(random.nextInt(width*2 - 2) + 1, random.nextInt(height*2 - 2) + 1);
+                monster = new Org(random.nextInt(width*2 - 2) + 1, random.nextInt(height*2 - 2) + 1);
 
             monsters.add(monster);
         }
+
+        for (int i = 0; i < 4; i++) {
+            Monster monster = new Elf(random.nextInt(width*2 - 2) + 1, random.nextInt(height*2 - 2) + 1);
+            while(monster.getPosition().equals(hero.getPosition()))
+                monster = new Elf(random.nextInt(width*2 - 2) + 1, random.nextInt(height*2 - 2) + 1);
+
+            monsters.add(monster);
+        }
+
         return monsters;
     }
 
@@ -83,29 +96,37 @@ public class Arena {
             case Character:
                 if(key.getCharacter() == 'q') screen.close(); break;
         }
+        for (int i = monsters.size()-1; i>=0; i--){
+            moveMonster(monsters.get(i).move(), monsters.get(i));
+            verifyMonsterCollisions();
+        }
         for (Monster m : monsters) {
             moveMonster(m.move(), m);
             verifyMonsterCollisions();
         }
     }
 
-    private boolean canMonsterMove(Position position){
+    private boolean canMonsterMove(Position position, Monster m){
         for (Wall wall : walls){
-            if (wall.getPosition().equals(position)) return false;
+            if (wall.getPosition().equals(position) && m instanceof Org){
+                return false;
+            }
+            else if (wall.getPosition().equals(position) && m instanceof Elf){
+                ((Elf) m).setDirection();
+                return false;
+            }
             else continue;
         }
         return true;
     }
 
     public void moveMonster(Position position, Monster m){
-        if (canMonsterMove(position)){
+        if (canMonsterMove(position, m)){
             m.setPosition(position);
         }
     }
 
     private boolean canHeroMove(Position position){
-//        if (position.getX() <= 0 || position.getX() >= width - 1) return false;
-//        if (position.getY() <= 0 || position.getY() >= height - 1) return false;
 
         for (Wall wall : walls){
             if (wall.getPosition().equals(position)) return false;
@@ -134,13 +155,11 @@ public class Arena {
         for (Monster m : monsters)
             if (hero.getPosition().equals(m.getPosition())){
                 monsters.remove(m);
-                monsters.remove(m);
-                monsters.remove(m);
-                monsters.remove(m);
-                monsters.remove(m);
 
-                System.out.println("You Died");
-                System.exit(0);
+                hero.drainEvergy();
+                System.out.println(hero.getEnergy());
+                if(hero.getEnergy() <= 0) System.exit(0);
+                break;
             }
     }
 
