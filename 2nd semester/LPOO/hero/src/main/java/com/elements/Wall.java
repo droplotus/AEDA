@@ -19,6 +19,7 @@ public class Wall extends Element {
     @Override
     public void draw(TextGraphics graphics){
         graphics.setForegroundColor(TextColor.Factory.fromString("#000000"));
+        graphics.setBackgroundColor(TextColor.Factory.fromString("#488AD7"));
         graphics.putString(new TerminalPosition(position.getX(), position.getY()), "@");
     }
 

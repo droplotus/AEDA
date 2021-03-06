@@ -24,7 +24,7 @@ public class Game{
         arena = new Arena(40, 20);
 
         try {
-            TerminalSize terminalSize = new TerminalSize(80, 40);
+            TerminalSize terminalSize = new TerminalSize(80, 43);
             DefaultTerminalFactory terminalFactory = new DefaultTerminalFactory()
                     .setInitialTerminalSize(terminalSize);
             Terminal terminal = terminalFactory.createTerminal();
@@ -44,7 +44,7 @@ public class Game{
 
     private void draw() throws IOException {
         screen.clear();
-        arena.draw(screen.newTextGraphics());
+        arena.draw(graphics);
         screen.refresh();
     }
 

@@ -10,6 +10,7 @@ import com.position.Position;
 
 public class Hero extends Element {
     private int energy = 100;
+    private int score = 0;
     public Hero(int x, int y){
         super(x, y);
     }
@@ -22,6 +23,7 @@ public class Hero extends Element {
     @Override
     public void draw(TextGraphics graphics){
         graphics.setForegroundColor(TextColor.Factory.fromString("#D2D201"));
+        graphics.setBackgroundColor(TextColor.Factory.fromString("#488AD7"));
         graphics.enableModifiers(SGR.BOLD);
         graphics.putString(new TerminalPosition(position.getX(), position.getY()), "X");
     }
@@ -46,8 +48,14 @@ public class Hero extends Element {
         return new Position(position.getX() -1, position.getY());
     }
 
+    public void revive(){ energy = 100; }
+
     public int getEnergy(){ return energy; }
 
-    public void drainEvergy(){ energy -= 50; }
+    public int getScore(){ return score; }
+
+    public void incrementScore() { score++; }
+
+    public void drainEvergy(){ energy -= 10; }
 
 }

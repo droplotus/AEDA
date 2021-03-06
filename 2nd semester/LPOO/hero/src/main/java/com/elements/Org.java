@@ -18,6 +18,7 @@ public class Org extends Monster {
     @Override
     public void draw(TextGraphics graphics){
         graphics.setForegroundColor(TextColor.Factory.fromString("#0DD506"));
+        graphics.setBackgroundColor(TextColor.Factory.fromString("#488AD7"));
         graphics.enableModifiers(SGR.BOLD);
         graphics.putString(new TerminalPosition(position.getX(), position.getY()), "O");
     }

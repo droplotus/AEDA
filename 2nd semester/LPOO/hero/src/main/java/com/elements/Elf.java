@@ -19,6 +19,7 @@ public class Elf extends Monster {
     @Override
     public void draw(TextGraphics graphics) throws IOException {
         graphics.setForegroundColor(TextColor.Factory.fromString("#ABAC8D"));
+        graphics.setBackgroundColor(TextColor.Factory.fromString("#488AD7"));
         graphics.enableModifiers(SGR.BOLD);
         graphics.putString(new TerminalPosition(position.getX(), position.getY()), "E");
     }

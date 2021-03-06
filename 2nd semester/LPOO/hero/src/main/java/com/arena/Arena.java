@@ -1,6 +1,7 @@
 package com.arena;
 
 import com.elements.*;
+import com.googlecode.lanterna.SGR;
 import com.googlecode.lanterna.TerminalPosition;
 import com.googlecode.lanterna.TerminalSize;
 import com.googlecode.lanterna.TextColor;
@@ -9,78 +10,73 @@ import com.googlecode.lanterna.input.KeyStroke;
 import com.googlecode.lanterna.screen.Screen;
 import com.position.Position;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import java.util.Random;
 
 public class Arena {
     private int width;
     private int height;
+    private boolean finished = false;
 
     private Hero hero;
-    private List<Wall> walls;
-    private List<Coin> coins;
-    private List<Monster> monsters;
+
+    private int map_it = 0;
+    private List<String> maps = new ArrayList<>(Arrays.asList(
+            "C:\\Users\\Droplotus\\Desktop\\FAC\\2nd semester\\LPOO\\hero\\src\\main\\java\\com\\arena\\map_1.txt",
+            "C:\\Users\\Droplotus\\Desktop\\FAC\\2nd semester\\LPOO\\hero\\src\\main\\java\\com\\arena\\map_2.txt",
+            "C:\\Users\\Droplotus\\Desktop\\FAC\\2nd semester\\LPOO\\hero\\src\\main\\java\\com\\arena\\map_3.txt"
+    ));
+
+    private List<Wall> walls = new ArrayList<>();
+    private List<Coin> coins = new ArrayList<>();
+    private List<Monster> monsters = new ArrayList<>();
+    private Door door;
 
     public Arena(int width, int height){
         this.width = width;
         this.height = height;
         this.hero = new Hero(10, 10);
-        this.walls = createWalls();
-        this.coins = createCoins();
-        this.monsters = createMonsters();
+        loadMap(maps.get(map_it++));
     }
 
-    private List<Wall> createWalls() {
-        List<Wall> walls = new ArrayList<>();
-
-        for (int c = 0; c < width*2; c++) {
-            walls.add(new Wall(c, 0));
-            walls.add(new Wall(c, height*2 - 1));
+    private void loadMap(String map){
+        BufferedReader reader;
+        walls.clear();
+        coins.clear();
+        monsters.clear();
+        try {
+            reader = new BufferedReader(new FileReader(map));
+            String line = reader.readLine();
+            int y = 0;
+            while(line!=null){
+                for(int x = 0; x < line.length(); x++){
+                    switch (line.charAt(x)){
+                        case '0':
+                            continue;
+                        case '1':
+                            this.walls.add(new Wall(x, y)); break;
+                        case '2':
+                            this.coins.add(new Coin(x, y)); break;
+                        case '3':
+                            this.monsters.add(new Org(x, y)); break;
+                        case '4':
+                            this.monsters.add(new Elf(x, y)); break;
+                        case '5':
+                            this.door = new Door(x, y); break;
+                        default:
+                            System.out.println(line.charAt(x));
+                    }
+                }
+                y++;
+                line = reader.readLine();
+            }
+        }catch (IOException e){
+            e.printStackTrace();
         }
-
-        for (int r = 1; r < height*2 - 1; r++) {
-            walls.add(new Wall(0, r));
-            walls.add(new Wall(width*2 - 1, r));
-        }
-
-        return walls;
-    }
-
-    private List<Coin> createCoins(){
-        Random random = new Random();
-        ArrayList<Coin> coins = new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
-            Coin coin = new Coin(random.nextInt(width*2 - 2) + 1, random.nextInt(height*2 - 2) + 1);
-            while(coin.getPosition().equals(hero.getPosition())) // falta ver se já coincide com alguma outra coin da List
-                coin = new Coin(random.nextInt(width*2 - 2) + 1, random.nextInt(height*2 - 2) + 1);
-
-            coins.add(coin);
-        }
-        return coins;
-    }
-
-    private List<Monster> createMonsters() {
-        Random random = new Random();
-        ArrayList<Monster> monsters = new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
-            Monster monster = new Org(random.nextInt(width*2 - 2) + 1, random.nextInt(height*2 - 2) + 1);
-            while(monster.getPosition().equals(hero.getPosition()))
-                monster = new Org(random.nextInt(width*2 - 2) + 1, random.nextInt(height*2 - 2) + 1);
-
-            monsters.add(monster);
-        }
-
-        for (int i = 0; i < 4; i++) {
-            Monster monster = new Elf(random.nextInt(width*2 - 2) + 1, random.nextInt(height*2 - 2) + 1);
-            while(monster.getPosition().equals(hero.getPosition()))
-                monster = new Elf(random.nextInt(width*2 - 2) + 1, random.nextInt(height*2 - 2) + 1);
-
-            monsters.add(monster);
-        }
-
-        return monsters;
     }
 
     public void processKey(KeyStroke key, Screen screen) throws IOException {
@@ -93,17 +89,17 @@ public class Arena {
                 moveHero(hero.moveLeft()); break;
             case ArrowRight:
                 moveHero(hero.moveRight()); break;
+            case Enter:
+                hero.revive();
+                map_it = 0;
+                loadMap(maps.get(map_it++));
             case Character:
                 if(key.getCharacter() == 'q') screen.close(); break;
         }
         for (int i = monsters.size()-1; i>=0; i--){
             moveMonster(monsters.get(i).move(), monsters.get(i));
-            verifyMonsterCollisions();
         }
-        for (Monster m : monsters) {
-            moveMonster(m.move(), m);
-            verifyMonsterCollisions();
-        }
+        monsters.remove(verifyMonsterCollisions());
     }
 
     private boolean canMonsterMove(Position position, Monster m){
@@ -140,39 +136,85 @@ public class Arena {
         if (canHeroMove(position)){
             hero.setPosition(position);
             retrieveCoins();
+            if(coins.size() <= 0) door.open();
+            if(door.isOpen() && hero.getPosition().equals(door.getPosition())){
+                if(map_it == maps.size()-1){
+                    finished = true;
+                    return;
+                }
+                loadMap(maps.get(map_it++));
+            }
         }
     }
 
     public void retrieveCoins(){
         for (Coin coin : coins)
             if (hero.getPosition().equals(coin.getPosition())){
+                hero.incrementScore();
                 coins.remove(coin);
                 break;
             }
     }
 
-    public void verifyMonsterCollisions(){
+    public Monster verifyMonsterCollisions(){
         for (Monster m : monsters)
             if (hero.getPosition().equals(m.getPosition())){
-                monsters.remove(m);
-
                 hero.drainEvergy();
                 System.out.println(hero.getEnergy());
-                if(hero.getEnergy() <= 0) System.exit(0);
-                break;
+                return m;
             }
+        return null;
+    }
+
+    private void drawEndGameScreen(TextGraphics graphics){
+        graphics.setBackgroundColor(TextColor.Factory.fromString("#488AD7"));
+        graphics.fillRectangle(new TerminalPosition(0, 0), new TerminalSize(width * 2, height * 2 + 3), ' ');
+        graphics.setForegroundColor(TextColor.Factory.fromString("#000000"));
+        graphics.putString(new TerminalPosition(33, 21), "CONGRATULATIONS!");
+        graphics.putString(new TerminalPosition(37, 22), "YOU WON!");
+        graphics.putString(new TerminalPosition(37, 24), "score: " + hero.getScore());
+    }
+
+    private void drawDeadScreen(TextGraphics graphics){
+        graphics.setBackgroundColor(TextColor.Factory.fromString("#488AD7"));
+        graphics.fillRectangle(new TerminalPosition(0, 0), new TerminalSize(width * 2, height * 2 + 3), ' ');
+        graphics.setForegroundColor(TextColor.Factory.fromString("#000000"));
+        graphics.putString(new TerminalPosition(30, 21), "BETTER LUCK NEXT TIME!");
+        graphics.putString(new TerminalPosition(36, 22), "YOU LOST!");
+        graphics.putString(new TerminalPosition(36, 24), "score: " + hero.getScore());
+        graphics.putString(new TerminalPosition(30, 26), "press [ENTER] to retry");
     }
 
     public void draw(TextGraphics graphics) throws IOException {
+
+
+        // drawing the health and score bar
+        graphics.setBackgroundColor(TextColor.Factory.fromString("#FFFFFF"));
+        graphics.fillRectangle(new TerminalPosition(0, 40), new TerminalSize(80, 3), ' ');
+
         // setting background
         graphics.setBackgroundColor(TextColor.Factory.fromString("#488AD7"));
         graphics.fillRectangle(new TerminalPosition(0, 0), new TerminalSize(width * 2, height * 2), ' ');
+
+        // score and health text
+        graphics.setForegroundColor(TextColor.Factory.fromString("#000000"));
+        graphics.setBackgroundColor(TextColor.Factory.fromString("#FFFFFF"));
+        graphics.enableModifiers(SGR.BOLD);
+        graphics.putString(new TerminalPosition(15, 41), "score: " + hero.getScore());
+        graphics.putString(new TerminalPosition(55, 41), "health: " + hero.getEnergy());
 
         // drawing components
         hero.draw(graphics);
         for(Wall wall : walls) wall.draw(graphics);
         for(Coin coin : coins) coin.draw(graphics);
         for(Monster monster : monsters) monster.draw(graphics);
+        door.draw(graphics);
+
+        // shows endgame screen
+        if(finished) drawEndGameScreen(graphics);
+
+        // shows dead screen
+        if(hero.getEnergy() <= 0) drawDeadScreen(graphics);
     }
 
 }
