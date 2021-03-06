@@ -2,14 +2,15 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include <fcntl.h>
+#include <fcntl.h> // for open
+#include <unistd.h> // for close
 
-struct initialData {
+struct InitialData {
 	char OPTION;
 	char *MODE;
 	char *FILE_DIR;
 
-} data;
+};
 
 int main(int argc, char **args, char **argv)
 {
@@ -26,7 +27,9 @@ int main(int argc, char **args, char **argv)
 	if((mode[0] != 'u' && mode[0] != 'g' && mode[0] != 'o' && mode[0] != 'a')) { fprintf(stderr, "ERROR: misuse of mode. [u | g | o | a]\n"); exit(1); }
 	if(fd < 0) { fprintf(stderr, "ERROR: path of file.\n"); exit(1); }
 	
+	// filling the data struct
+	struct InitialData data = {.OPTION = option, .MODE = mode, .FILE_DIR = file_dir};
 
-	//close(fd);
+	close(fd);
 	return 0;
 }
