@@ -1,3 +1,5 @@
+package com.position;
+
 public class Position {
 
     private int x;
